@@ -1,4 +1,6 @@
 {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
   "name": "WebSocket Test Client",
   "short_name": "wstest",
   "manifest_version": 3,
@@ -11,14 +13,14 @@
     "128": "resources/icon_128.png"
   },
 
-  "browser_action": {
+  "action": {
     "default_icon": "resources/icon_032.png"
   },
 
   "options_page": "index.html",
 
   "background":{
-    "scripts": [ "background.js" ]
+    "service_worker": "background.js"
   },
 
   "permissions": [ "tabs" ]
